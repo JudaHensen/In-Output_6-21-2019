@@ -1,5 +1,5 @@
 # Special Input/Output
-Team #????? <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Team #
 1. Juda Hensen
 
 [Projectmanagment](https://trello.com/b/basiDeQY/in-output-v2) <Trello scrumboard bijvoorbeeld>
