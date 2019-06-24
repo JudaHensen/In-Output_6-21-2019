@@ -9,7 +9,7 @@ Beschrijf hier kort jullie project
 
 ## Portfolio
 
-* [Onderzoek]()
+* [Onderzoek](https://docs.google.com/document/d/1x1-7UR3gfvBJXAK0tJwHy8W63ENRNdeEM8bwFhv8dPk/edit?usp=sharing)
 * [Ontwerp]()
 * [Testrapportage]()
 * [Presentatie]()
