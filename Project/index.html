@@ -12,6 +12,12 @@
   </body>
 </html>
 
+<style>
+  #canvas {
+    background-color: red;
+  }
+</style>
+
 <script src="upload_image.js"></script>
 
 <script>
@@ -19,8 +25,8 @@
   let canvas = document.getElementById('canvas');
   let context = canvas.getContext('2d');
 
-  let uplink = new UploadImage(context);
   let input = document.getElementById('map');
-  input.addEventListener('change', uplink.SetImage, input);
+  let uplink = new UploadImage(context, input);
+
 
 </script>
