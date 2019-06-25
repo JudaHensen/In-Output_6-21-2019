@@ -3,7 +3,9 @@ body {
   background-color: rgb(50,50,50);
 }
 
-
+p {
+  user-select: none;
+}
 
 #top_section {
   display: grid;
@@ -14,9 +16,25 @@ body {
 }
 
   #instrument_select {
-    display: block;
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: 100px 100px;
+
     background-color: red;
   }
+    .instrument_selector {
+      width: 100px;
+      height: 100px;
+      background-color: brown;
+      margin: 0;
+      padding: 0;
+    }
+    .instrument_selectorText {
+      margin: 0;
+      margin-top: 30px;
+      font-size: 1.4em;
+      text-align: center;
+    }
 
   #general_setup {
     display: block;
