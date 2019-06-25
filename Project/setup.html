@@ -19,9 +19,30 @@
         </section>
         <!-- general setup & imahe uploader -->
         <section id="general_setup">
+          <!-- bpm -->
+          <div>
+            <p>Bpm</p>
+            <input id="bpm_selector" type="number" min="30" max="200" value="110"/>
+          </div>
+          <!-- quantize -->
+          <div>
+            <p>Quantize</p>
+            <select id="quantize_selector">
+              <option value="4">4</option>
+              <option value="8">8</option>
+              <option value="16">16</option>
+            </select>
+          </div>
+
+          <div>
+            <p>Output volume</p>
+            <input id="volume_selector" type="number" min="0" max="100" value="80"/>
+          </div>
+
         </section>
         <!-- start / stop -->
         <section id="playback">
+          <p id="playbackText">Start</p>
         </section>
 
       </div>
@@ -37,9 +58,11 @@
         </section>
 
       </div>
-
     </div>
 
+    <!-- Scripts -->
+    <script src="Main.js"></script>
+    <script src="General.js"></script>
 
   </body>
 </html>
