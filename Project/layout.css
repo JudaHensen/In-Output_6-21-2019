@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  background-color: rgb(50,50,50);
+}
+
+
+
+#top_section {
+  display: grid;
+  grid-template-columns: 400px 766px 200px;
+
+  width: 100%;
+  height: 200px;
+}
+
+  #instrument_select {
+    display: block;
+    background-color: red;
+  }
+
+  #general_setup {
+    display: block;
+    background-color: green;
+  }
+
+  #playback {
+    display: block;
+    background-color: blue;
+  }
+
+
+#bottom_section {
+  display: grid;
+  grid-template-columns: 200px 1166px;
+
+  width: 100%;
+  height: 568px;
+}
+
+  #instrument_editor {
+    display: block;
+    background-color: purple;
+  }
+
+  #map_holder {
+    display: block;
+    background-color: rgb(20,20,20);
+  }
+
+    #map {
+      display: block;
+      background-color: gold;
+    }
