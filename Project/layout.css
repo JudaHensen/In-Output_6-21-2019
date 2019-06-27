@@ -47,6 +47,7 @@ p {
   #general_setup {
     display: block;
     background-color: green;
+    overflow-y: auto;
   }
 
   #playback {

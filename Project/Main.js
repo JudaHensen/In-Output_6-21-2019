@@ -1,7 +1,13 @@
 const canvas = document.getElementById('map');
 const context = canvas.getContext('2d');
+const fileUploader = new FileUploader();
 
-var bpm = 110, quantize = 8, outputVolume = .8, isPlaying,
+var audio = new Audio();
+
+const imageSelect = document.getElementById('imageSelect');
+imageSelect.addEventListener('change', fileUploader.UploadImage, false);
+
+var bpm = 110, quantize = 4, outputVolume = .8, isPlaying,
     beatTime = (60 / (bpm / 4)) / quantize;
 
 document.getElementById('playback').addEventListener('click', ()=>{

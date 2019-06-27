@@ -3,7 +3,7 @@ let attributes = [];
 
 function ChangeInstrumentEditor(instrument) {
   if(instrument == type) return;
-  type = instrument
+  type = instrument;
 
   let parent = document.getElementById('instrument_editor');
 
@@ -36,22 +36,32 @@ function ChangeInstrumentEditor(instrument) {
 
     p.innerHTML = key;
 
-    select.type = 'number';
-    select.min = 0;
-    select.max = 1;
-    select.value = val;
+    // If the key is a sample, reference the FileUploader
+    if(key == 'sample') {
+      select.type = 'file';
+      select.accept = '.wav, .mp3, .ogg';
 
-    select.addEventListener('change', ()=>{
-      if(select.value < 0) select.value = 0;
-      else if(select.value > 1) select.value = 1;
-      // Set attribute for the correct instrument
-      for(let i = 0; i < instruments.length; i++) {
-        if(instruments[i].GetType() == type) {
-          instruments[i].SetAttribute(key, select.value);
-          break;
+      select.addEventListener('change', fileUploader.UploadAudio, false);
+    }
+    else {
+      select.type = 'number';
+      select.min = 0;
+      select.max = 1;
+      select.value = val;
+
+      select.addEventListener('change', ()=>{
+        if(select.value < 0) select.value = 0;
+        else if(select.value > 1) select.value = 1;
+        // Set attribute for the correct instrument
+        for(let i = 0; i < instruments.length; i++) {
+          if(instruments[i].GetType() == type) {
+            instruments[i].SetAttribute(key, select.value);
+            break;
+          }
         }
-      }
-    });
+      });
+    }
+
     // Assign elemnts to html
     div.appendChild(p);
     div.appendChild(select);

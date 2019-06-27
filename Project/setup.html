@@ -39,6 +39,9 @@
             <input id="volume_selector" type="number" min="0" max="100" value="80"/>
           </div>
 
+          <p>Image mapp</p>
+          <input id="imageSelect" type="file" accept=".png" >
+
         </section>
         <!-- start / stop -->
         <section id="playback">
@@ -61,15 +64,17 @@
     </div>
 
     <!-- Scripts -->
+    <script src="file_upload.js"></script>
+
     <script src="Main.js"></script>
-    <script src="General.js"></script>
+    <script src="general.js"></script>
 
-    <script src="SampleManager.js"></script>
-    <script src="ToneManager.js"></script>
-    <script src="OscillatorManager.js"></script>
+    <script src="sample_manager.js"></script>
+    <script src="tone_manager.js"></script>
+    <script src="oscillator_manager.js"></script>
 
-    <script src="instrumentEditor.js"></script>
-    <script src="InstrumentManager.js"></script>
+    <script src="instrument_editor.js"></script>
+    <script src="instrument_manager.js"></script>
 
   </body>
 </html>
