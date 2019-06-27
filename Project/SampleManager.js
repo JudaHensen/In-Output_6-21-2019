@@ -9,7 +9,7 @@ class SampleManager {
 
   // Play according to map data
   Play(mapData) {
-
+    
   }
 
   // Stops all drums

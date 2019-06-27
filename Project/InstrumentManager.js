@@ -1,6 +1,7 @@
 let instrumentNames = ["kick", "snare", "hihat", "noise", "sine", "triangle", "square", "sawtooth"];
 var instruments = [];
 
+/// Create html elements to select desired instrument editor.
 for(let i = 0; i < instrumentNames.length; i++) {
   // Create html elements
   let value = instrumentNames[i];
@@ -26,12 +27,14 @@ for(let i = 0; i < instrumentNames.length; i++) {
       break;
   }
 }
+ChangeInstrumentEditor( instrumentNames[instrumentNames.length-1] );
 
+// Create Sample player
 function CreateSample(type) {
   let obj = new SampleManager(type);
   instruments.push(obj);
 }
-
+// Create oscillator
 function CreateOscillator(type) {
   let obj = new OscillatorManager(type);
   instruments.push(obj);

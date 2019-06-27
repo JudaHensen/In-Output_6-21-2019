@@ -7,6 +7,7 @@ function ChangeInstrumentEditor(instrument) {
 
   let parent = document.getElementById('instrument_editor');
 
+  // Remove current html elements
   while(parent.firstChild) {
     parent.removeChild(parent.firstChild);
   }
@@ -15,10 +16,14 @@ function ChangeInstrumentEditor(instrument) {
   for(let i = 0; i < instruments.length; i++) {
     if(instruments[i].GetType() == type) {
       attributes = instruments[i].GetAttributes();
-      console.log(i);
       break;
     }
   }
+
+  let title = document.createElement('p');
+  title.innerHTML = '<b><i>' + instrument + '</i></b>';
+  parent.appendChild(title);
+
   // Create html elements
   for(let i = 0; i < attributes.length; i++) {
     let id = i;
@@ -47,11 +52,10 @@ function ChangeInstrumentEditor(instrument) {
         }
       }
     });
-
+    // Assign elemnts to html
     div.appendChild(p);
     div.appendChild(select);
 
     parent.appendChild(div);
   }
-
 }

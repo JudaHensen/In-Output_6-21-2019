@@ -10,6 +10,8 @@ document.getElementById('bpm_selector').addEventListener('change', ()=>{
 // Change quantize
 document.getElementById('quantize_selector').addEventListener('change', ()=>{
   quantize = parseInt(document.getElementById('quantize_selector').value);
+
+  beatTime = (60/ (bpm / 4)) / quantize;
 });
 
 // Change outputVolume

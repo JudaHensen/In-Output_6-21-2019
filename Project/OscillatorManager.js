@@ -9,6 +9,8 @@ class OscillatorManager {
                         sustain: 1,
                         release: .25 };
 
+    this.toneManager = new ToneManager();
+
     this.oscillators = [];
   }
 

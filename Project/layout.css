@@ -3,8 +3,14 @@ body {
   background-color: rgb(50,50,50);
 }
 
+@font-face {
+  font-family: silkscreen;
+  src: url(fonts/silkscreen.ttf);
+}
+
 p {
   user-select: none;
+  font-family: silkscreen;
 }
 
 #top_section {
@@ -28,11 +34,13 @@ p {
       background-color: brown;
       margin: 0;
       padding: 0;
+
+      border: 1px solid black;
     }
     .instrument_selectorText {
       margin: 0;
-      margin-top: 30px;
-      font-size: 1.4em;
+      margin-top: 32.5px;
+      font-size: 1em;
       text-align: center;
     }
 
@@ -45,6 +53,11 @@ p {
     display: block;
     background-color: blue;
   }
+    #playbackText {
+      margin: 32.5% 0 0 0;
+      font-size: 3.2em;
+      text-align: center;
+    }
 
 
 #bottom_section {
