@@ -18,6 +18,7 @@ class FileUploader {
           canvas.height = img.naturalHeight;
 
           context.drawImage(img, 0, 0);
+          imgToPx.ConvertImage();
         });
       };
     }

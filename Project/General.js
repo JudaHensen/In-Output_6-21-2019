@@ -5,6 +5,7 @@ document.getElementById('bpm_selector').addEventListener('change', ()=>{
   else if(elem.value > 200) elem.value = 200;
 
   bpm = parseInt(elem.value);
+  beatTime = (60/ (bpm / 4)) / quantize;
 });
 
 // Change quantize
@@ -20,5 +21,5 @@ document.getElementById('volume_selector').addEventListener('change', ()=>{
   if(elem.value < 0) elem.value = 0;
   else if(elem.value > 100) elem.value = 100;
 
-  bpm = parseInt(elem.value);
+  outputVolume = parseInt(elem.value)/100;
 });

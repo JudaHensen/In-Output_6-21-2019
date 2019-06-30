@@ -45,7 +45,9 @@ p {
     }
 
   #general_setup {
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
     background-color: green;
     overflow-y: auto;
   }

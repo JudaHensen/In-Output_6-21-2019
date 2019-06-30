@@ -1,4 +1,4 @@
-let instrumentNames = ["kick", "snare", "hihat", "noise", "sine", "triangle", "square", "sawtooth"];
+var instrumentNames = ["kick", "snare", "hihat", "noise", "sine", "triangle", "square", "sawtooth"];
 var instruments = [];
 
 /// Create html elements to select desired instrument editor.
