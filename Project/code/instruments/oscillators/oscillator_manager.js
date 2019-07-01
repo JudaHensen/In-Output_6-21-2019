@@ -2,26 +2,48 @@ class OscillatorManager {
 
   constructor(type) {
     this.type = type;
+    this.main = mainContext;
     this.attributes = { volume: 1,
-                        attack: 0.1,
+                        attack: 0.07,
                         level: 1,
-                        decay: 0,
+                        decay: 0.15,
                         sustain: 1,
-                        release: .25 };
+                        release: .075 };
 
     this.toneManager = new ToneManager();
 
     this.oscillators = [];
   }
 
-  // Play according to map data
+  // Play oscillators according to map data
   Play(mapData) {
+    // Remove all previous oscillators in case they still exist
+    while(this.oscillators.length > 0) this.oscillators.pop();
 
+    let att = this.attributes;
+
+    for(let i = 0; i < mapData.length; i++) {
+
+      let tones = this.toneManager.GetTone(mapData[i].note);
+      let delay = i * beatTime;
+
+      if(mapData[i].volume != 0) {
+        // Play & create oscillator for each note
+        for(let c = 0; c < tones.length; c++) {
+          let osc = new Oscillator(att.volume, tones[c]);
+          osc.Start(mapData[i].volume, delay, att.attack, att.level, att.decay, att.sustain, att.release);
+          this.oscillators.push(osc);
+        }
+      }
+    }
   }
 
   // Stops all oscillators
   Stop() {
-
+    for(let i = this.oscillators.length - 1; i > -1; i--) {
+      this.oscillators[i].Stop();
+      this.oscillators.pop();
+    }
   }
 
   GetType() {

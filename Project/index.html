@@ -3,30 +3,86 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+
+    <link rel="stylesheet" href="layout.css">
+
   </head>
   <body>
 
-    <input id="map" type="file" accept="image/png">
-    <canvas id="canvas" width="200px" height="200px"></canvas>
+
+    <div id="wrapper">
+
+      <!-- top side -->
+      <div id="top_section">
+        <!-- instrument select -->
+        <section id="instrument_select">
+        </section>
+        <!-- general setup & imahe uploader -->
+        <section id="general_setup">
+          <!-- bpm -->
+          <div>
+            <p>Bpm</p>
+            <input id="bpm_selector" type="number" min="30" max="200" value="110"/>
+          </div>
+          <!-- quantize -->
+          <div>
+            <p>Quantize</p>
+            <select id="quantize_selector">
+              <option value="4">4</option>
+              <option value="8">8</option>
+              <option value="16">16</option>
+            </select>
+          </div>
+
+          <div>
+            <p>Output volume</p>
+            <input id="volume_selector" type="number" min="0" max="100" value="80"/>
+          </div>
+
+          <div>
+            <p>Image mapp</p>
+            <input id="imageSelect" type="file" accept=".png"/>
+          </div>
+
+        </section>
+        <!-- start / stop -->
+        <section id="playback">
+          <p id="playbackText">Start</p>
+        </section>
+
+      </div>
+      <!-- bottom side -->
+      <div id="bottom_section">
+        <!-- instrument editor -->
+        <section id="instrument_editor">
+        </section>
+        <!-- image file -->
+        <section id="map_holder">
+          <canvas id="map">
+          </canvas>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="code/files/convert_image.js"></script>
+    <script src="code/files/file_upload.js"></script>
+    <!-- foundation -->
+    <script src="code/Main.js"></script>
+    <script src="code/general.js"></script>
+
+    <!-- sample -->
+    <script src="code/instruments/samples/sample_manager.js"></script>
+
+    <!-- oscillator -->
+    <script src="code/instruments/oscillators/tone_manager.js"></script>
+    <script src="code/instruments/oscillators/oscillator.js"></script>
+    <script src="code/instruments/oscillators/oscillator_manager.js"></script>
+
+    <!-- instruments -->
+    <script src="code/instruments/instrument_editor.js"></script>
+    <script src="code/instruments/instrument_manager.js"></script>
 
   </body>
 </html>
-
-<style>
-  #canvas {
-    background-color: red;
-  }
-</style>
-
-<script src="upload_image.js"></script>
-
-<script>
-
-  let canvas = document.getElementById('canvas');
-  let context = canvas.getContext('2d');
-
-  let input = document.getElementById('map');
-  let uplink = new UploadImage(context, input);
-
-
-</script>

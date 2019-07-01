@@ -2,6 +2,7 @@ const canvas = document.getElementById('map');
 const context = canvas.getContext('2d');
 const imgToPx = new ImageToPixels(context);
 const fileUploader = new FileUploader();
+var mainContext = new AudioContext();
 
 var audio = new Audio();
 
@@ -29,7 +30,7 @@ function Play() {
       instruments[i].Play( imgToPx.GetData(instrumentNames[i]) );
     }
   }
-  else console.warn('You need to obtain image data before you can play music.');
+  else window.alert('You need to upload a correct image before you can play music.');
 }
 
 // Stop playback

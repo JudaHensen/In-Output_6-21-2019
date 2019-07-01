@@ -45,13 +45,13 @@ function ChangeInstrumentEditor(instrument) {
     }
     else {
       select.type = 'number';
-      select.min = 0;
+      select.min = 0.01;
       select.max = 1;
       select.value = val;
 
       select.addEventListener('change', ()=>{
-        if(select.value < 0) select.value = 0;
-        else if(select.value > 1) select.value = 1;
+        if(select.value < select.min) select.value = select.min;
+        else if(select.value > select.max) select.value = select.max;
         // Set attribute for the correct instrument
         for(let i = 0; i < instruments.length; i++) {
           if(instruments[i].GetType() == type) {
