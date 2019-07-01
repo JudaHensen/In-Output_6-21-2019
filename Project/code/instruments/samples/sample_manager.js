@@ -18,7 +18,6 @@ class SampleManager {
     for(let i = 0; i < mapData.length; i++) {
       if(mapData[i].volume > 0) {
         let delay = i * beatTime;
-        console.log('delay: ' + delay);
 
         let obj = {};
         obj.sample = new Audio();

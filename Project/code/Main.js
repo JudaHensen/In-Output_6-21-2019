@@ -24,8 +24,6 @@ function Play() {
     isPlaying = true;
     document.getElementById('playbackText').innerHTML = 'Stop';
 
-    console.log('bpm: ' + bpm + ' | quantize: ' + quantize + ' | beatTime: ' + beatTime + ' | outputVolume: ' + outputVolume)// <<<<<<<<<<<<<<<<<<<<<<<
-
     for(let i = 0; i < instruments.length; i++) {
       instruments[i].Play( imgToPx.GetData(instrumentNames[i]) );
     }

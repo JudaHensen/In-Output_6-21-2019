@@ -17,7 +17,7 @@ class ImageToPixels {
   ConvertImage() {
     // Obtain data
     let imgData = this.ctx.getImageData(0, 0, this.ctx.canvas.width, this.ctx.canvas.height);
-    if(imgData.height > maxColumns) console.warn('Image height cannot be greater than ' + maxColumns) + '!';
+    if(imgData.height > maxColumns) window.alert('Image height cannot be greater than ' + maxColumns) + '!';
     else {
       for(let i = 0; i < imgData.height; i++) {
         // data obtained from image
