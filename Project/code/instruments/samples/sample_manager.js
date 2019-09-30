@@ -2,7 +2,7 @@ class SampleManager {
 
   constructor(type) {
     this.type = type;
-    this.attributes = { volume: .1, sample: new Audio("samples/" + this.type + ".ogg") }
+    this.attributes = { volume: .01, sample: new Audio("samples/" + this.type + ".ogg") }
 
     this.sample = new Audio();
     this.sample.src = 'samples/' + this.type + '.ogg';
