@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  background-color: rgb(50,50,50);
+}
+
+@font-face {
+  font-family: silkscreen;
+  src: url(fonts/silkscreen.ttf);
+}
+
+p {
+  user-select: none;
+  font-family: silkscreen;
+}
+
+#top_section {
+  display: grid;
+  grid-template-columns: 400px 766px 200px;
+
+  width: 100%;
+  height: 200px;
+}
+
+  #instrument_select {
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: 100px 100px;
+
+    background-color: red;
+  }
+    .instrument_selector {
+      width: 100px;
+      height: 100px;
+      background-color: brown;
+      margin: 0;
+      padding: 0;
+
+      border: 1px solid black;
+    }
+    .instrument_selectorText {
+      margin: 0;
+      margin-top: 32.5px;
+      font-size: 1em;
+      text-align: center;
+    }
+
+  #general_setup {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    background-color: green;
+    overflow-y: auto;
+  }
+
+  #playback {
+    display: block;
+    background-color: blue;
+  }
+    #playbackText {
+      margin: 32.5% 0 0 0;
+      font-size: 3.2em;
+      text-align: center;
+    }
+
+
+#bottom_section {
+  display: grid;
+  grid-template-columns: 200px 1166px;
+
+  width: 100%;
+  height: 568px;
+}
+
+  #instrument_editor {
+    display: block;
+    background-color: purple;
+  }
+
+  #map_holder {
+    display: block;
+    background-color: rgb(20,20,20);
+  }
+
+    #map {
+      display: block;
+      background-color: gold;
+    }
